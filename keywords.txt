@@ -1,0 +1,32 @@
+#######################################
+# Syntax Coloring Map For
+# esp basic fs
+#######################################
+
+#######################################
+# DataTypes (KEYWORD1)
+#######################################
+
+BasicFS   KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setup  KEYWORD2
+fileName   KEYWORD2
+fileMd5   KEYWORD2
+exists   KEYWORD2
+readFile   KEYWORD2
+writeFile   KEYWORD2
+appendFile   KEYWORD2
+
+#######################################
+# (KEYWORD3)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
