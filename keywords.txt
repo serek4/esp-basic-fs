@@ -20,6 +20,7 @@ exists   KEYWORD2
 readFile   KEYWORD2
 writeFile   KEYWORD2
 appendFile   KEYWORD2
+freeSpace   KEYWORD2
 
 #######################################
 # (KEYWORD3)

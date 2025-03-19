@@ -22,6 +22,7 @@
 // clang-format on
 
 #define FILE_SYSTEM LittleFS
+#define FS_MIN_FREE_SPACE 4096
 
 class BasicFS {
 
@@ -42,6 +43,7 @@ class BasicFS {
 	bool writeFile(String& data, String filename, File& file);
 	bool appendFile(String& data, String filename, File& file);
 	bool renameFile(String filename, String newFilename);
+	size_t freeSpace(bool update = false);
 
 	friend class BasicConfig;
 	friend class BasicWebServer;
@@ -49,6 +51,7 @@ class BasicFS {
 
   private:
 	bool _fsStarted;
+	size_t _freeSpace;
 };
 
 extern BasicFS filesystem;
