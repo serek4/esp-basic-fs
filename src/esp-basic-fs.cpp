@@ -3,7 +3,8 @@
 BasicFS filesystem;
 
 BasicFS::BasicFS()
-    : _fsStarted(false)
+    : BasicPlugin::BasicPlugin("fs")
+    , _fsStarted(false)
     , _freeSpace(0) {
 }
 

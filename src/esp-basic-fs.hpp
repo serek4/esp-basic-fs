@@ -5,6 +5,7 @@
 #include <esp_littlefs.h>
 #endif
 #include <MD5Builder.h>
+#include <esp-basic-plugin.hpp>
 
 // #define BASIC_FS_DEBUG
 // debug printing macros
@@ -24,7 +25,7 @@
 #define FILE_SYSTEM LittleFS
 #define FS_MIN_FREE_SPACE 4096
 
-class BasicFS {
+class BasicFS : public BasicPlugin {
 
   public:
 	enum ReadFileError {
