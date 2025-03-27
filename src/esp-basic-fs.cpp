@@ -8,13 +8,17 @@ BasicFS::BasicFS()
     , _freeSpace(0) {
 }
 
-bool BasicFS::setup(bool formatOnFail) {
+bool BasicFS::isMounted() {
 #ifdef ARDUINO_ARCH_ESP32
-	if (esp_littlefs_mounted("spiffs")) {
+	return esp_littlefs_mounted("spiffs");
 #elif defined(ARDUINO_ARCH_ESP8266)
 	FSInfo FsInfo;
-	if (FILE_SYSTEM.info(FsInfo)) {
+	return FILE_SYSTEM.info(FsInfo);
 #endif
+}
+
+bool BasicFS::setup(bool formatOnFail) {
+	if (isMounted()) {
 		BASIC_FS_PRINTLN("file system already mounted!");
 		_fsStarted = true;
 	} else {

@@ -36,6 +36,7 @@ class BasicFS : public BasicPlugin {
 
 	BasicFS();
 
+	bool isMounted();
 	bool setup(bool formatOnFail = false);
 	String fileName(String filename);
 	String fileMd5(String filename);

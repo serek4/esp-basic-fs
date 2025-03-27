@@ -13,7 +13,8 @@ BasicFS   KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-setup  KEYWORD2
+isMounted   KEYWORD2
+setup   KEYWORD2
 fileName   KEYWORD2
 fileMd5   KEYWORD2
 exists   KEYWORD2
